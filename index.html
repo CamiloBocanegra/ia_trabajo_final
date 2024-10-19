@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automático</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="atm">
+        <h1>Cajero Automático</h1>
+        <div id="login-section">
+            <input type="text" id="user" placeholder="Usuario por defecto: cliente" />
+            <input type="password" id="pin" placeholder="PIN por defecto: 1234" />
+            <button onclick="login()">Ingresar</button>
+        </div>
+        <div id="atm-section" class="hidden">
+            <h2 id="welcome"></h2>
+            <button onclick="consultarSaldo()">Consultar Saldo</button>
+            <button onclick="retirar()">Retirar</button>
+            <button onclick="consignar()">Consignar</button>
+            <p id="balance"></p>
+            <input type="number" id="amount" class="hidden" placeholder="Ingrese monto">
+            <button id="confirm-btn" class="hidden" onclick="confirmarOperacion()">Confirmar</button>
+            <button onclick="salir()">Salir</button>
+        </div>
+        <p id="message"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
